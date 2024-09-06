@@ -14,10 +14,10 @@ services:
       MYSQL_PASSWORD: $MYSQL_PASSWORD
     ports:
       - 2302-2306:2302-2306/udp
-    volumes: # TODO: fix that before deployment
+    volumes:
       - ./build:/server
-      - ./mission_file:/configs/mpmissions/mission_file
-      - ./@mod_server:/configs/servermods/@mod_server
+      - ./Altis_Life.Altis:/configs/mpmissions/Altis_Life.Altis
+      - ./@life_server:/configs/servermods/@life_server
       - ./configs/mods.json:/configs/mods.json
       - ./configs/server.cfg:/configs/server.cfg
     depends_on:
