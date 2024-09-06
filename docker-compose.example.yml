@@ -9,7 +9,7 @@ services:
       ARMA_PARAMS: -autoinit
       MYSQL_HOST: db
       MYSQL_PORT: 3306
-      MYSQL_DATABASE: stargate
+      MYSQL_DATABASE: aquila
       MYSQL_USER: superadmin
       MYSQL_PASSWORD: $MYSQL_PASSWORD
     ports:
@@ -33,7 +33,7 @@ services:
       - ./configs/database.sql:/docker-entrypoint-initdb.d/database.sql
     environment:
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
-      MYSQL_DATABASE: stargate
+      MYSQL_DATABASE: aquila
       MYSQL_USER: superadmin
       MYSQL_PASSWORD: $MYSQL_PASSWORD
     networks:
